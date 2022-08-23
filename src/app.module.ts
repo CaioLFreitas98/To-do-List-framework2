@@ -16,7 +16,7 @@ import { UserModule } from './user/user.module';
       port: 3306,
       username: 'root',
       password: 'admin',
-      database: 'To do List',
+      database: 'ToDoList',
       entities: [User, Task],
       synchronize: true,
       logging: true,

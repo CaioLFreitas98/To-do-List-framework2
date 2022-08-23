@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Task } from './entities/task';
 import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class TaskService {
@@ -8,7 +9,7 @@ export class TaskService {
 private  task: Task[] = [];
 
 constructor(
-  @Inject('Task_REPOSITORY')
+  @InjectRepository(Task)
   private taskRepository: Repository<Task>,
 ) {}
 
